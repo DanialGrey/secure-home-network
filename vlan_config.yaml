@@ -1,0 +1,59 @@
+
+---
+
+## 🧰 Tools Used
+
+- **VLAN-capable router/firewall** (e.g., pfSense, UniFi, AsusWRT-Merlin)
+- **Draw.io** (for architecture diagram)
+- **Pi-hole** (optional DNS logging)
+- **Nmap / Wireshark** (network visibility)
+- **Static IP reservations**
+- **WPA3 and strong passwords**
+
+---
+
+## 🎯 Goals
+
+- Create a secure-by-design home lab environment
+- Demonstrate practical application of Security+ knowledge
+- Prevent lateral movement between untrusted and trusted devices
+- Maintain logs and visibility into device behavior
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+
+---
+
+## ✍️ Author
+
+Created by **[Your Name]**  
+*Cybersecurity Enthusiast | CompTIA Security+ Certified | Home Lab Builder*
+
+
+
+vlans:
+  - id: 10
+    name: Trusted
+    subnet: 192.168.10.0/24
+    description: "Trusted devices like personal PC, NAS"
+  - id: 20
+    name: IoT
+    subnet: 192.168.20.0/24
+    description: "IoT devices with no LAN access"
+  - id: 30
+    name: Guest
+    subnet: 192.168.30.0/24
+    description: "Guest Wi-Fi, internet only"
+firewall_rules:
+  - source_vlan: 10
+    destination: "any"
+    allow: true
+  - source_vlan: 20
+    destination: "local_lan"
+    allow: false
+  - source_vlan: 30
+    destination: "local_lan"
+    allow: false
