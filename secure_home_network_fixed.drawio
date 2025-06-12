@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Secure Home Network">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="Internet" style="ellipse;fillColor=#dae8fc" parent="1" vertex="1">
+          <mxGeometry x="300" y="20" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="3" value="Modem" style="rounded=1;fillColor=#fff2cc" parent="1" vertex="1">
+          <mxGeometry x="300" y="100" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="Router/Firewall" style="rounded=1;fillColor=#d5e8d4" parent="1" vertex="1">
+          <mxGeometry x="300" y="180" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="Trusted Devices VLAN (10)" style="swimlane;fillColor=#e1d5e7" parent="1" vertex="1">
+          <mxGeometry x="40" y="260" width="180" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="6" value="IoT Devices VLAN (20)" style="swimlane;fillColor=#f8cecc" parent="1" vertex="1">
+          <mxGeometry x="240" y="260" width="180" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="7" value="Guest Wi-Fi VLAN (30)" style="swimlane;fillColor=#cce5ff" parent="1" vertex="1">
+          <mxGeometry x="440" y="260" width="180" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="10" style="edgeStyle=orthogonalEdgeStyle" edge="1" parent="1" source="2" target="3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="11" style="edgeStyle=orthogonalEdgeStyle" edge="1" parent="1" source="3" target="4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="12" style="edgeStyle=orthogonalEdgeStyle" edge="1" parent="1" source="4" target="5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="13" style="edgeStyle=orthogonalEdgeStyle" edge="1" parent="1" source="4" target="6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="14" style="edgeStyle=orthogonalEdgeStyle" edge="1" parent="1" source="4" target="7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
